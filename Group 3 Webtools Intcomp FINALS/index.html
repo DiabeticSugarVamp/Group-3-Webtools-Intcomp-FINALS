@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santify Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav style="font-size: 1em; font-weight: 550; color: #c9c9c9; grid-area: navbar; background-color: #072E33; height: 65px; display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; box-sizing: border-box; position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <div class="navbar_controller" style="display: none;"></div>
+    <ul style="list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-left: auto; overflow-y: auto;">
+      <li class="navbar_item" style="display: flex; align-items: center;">
+        <img src="line.png" alt="line icon" style="width: 30px; margin: 5px;">
+      </li>
+      <li class="navbar_item" style="cursor: pointer; text-align: center; padding: 3px; box-sizing: border-box; font-size: 20px; font-weight: lighter; color: #1ED7C3; font-family: Super Boys;">
+        <a href="Landing Page.html" style="text-decoration: none; color: #1ED7C3;" role="button">Sign Out</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="spotify-player">
+    <div class="player-header">
+      <img src="playing.gif" alt="Santify Logo">
+      <h1 class="now-playing-header">Now Playing</h1>
+    </div>
+
+    <div class="song-info">
+      <img id="album-cover" src="joy1.png" alt="Album Cover">
+      <div class="details">
+        <h2 id="song-title">When She Loved Me</h2>
+        <p id="artist-name">Joy Lyn Mejia</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <img id="prev-btn" src="previous.png" alt="Previous Button" onclick="prevSong()">
+      <img id="play-btn" src="play.png" alt="Play Button" onclick="togglePlayPause()">
+      <img id="pause-btn" src="pause.png" alt="Pause Button" onclick="togglePlayPause()">
+      <img id="next-btn" src="next.png" alt="Next Button" onclick="nextSong()">
+    </div>
+  </div>
+
+  <script>
+    const songs = [
+      { title: 'When She Loved Me', artist: 'Joy Lyn Mejia', cover: 'joy1.png', file: 'jsong1.mp3' },
+      { title: 'Karma Police', artist: 'Israel Rodriguez', cover: 'isaac1.png', file: 'isong1.mp3' },
+      { title: 'DNA', artist: 'Micaella Santiago', cover: 'miyaki1.png', file: 'msong1.aac' },
+      { title: 'Bulong', artist: 'Vob Aviso', cover: 'vob1.png', file: 'vsong1.mp3' },      
+      { title: 'Cant Help Falling Inlove', artist: 'Joy Lyn Mejia', cover: 'joy2.png', file: 'jsong2.mp3' },
+      { title: 'No Surprises', artist: 'Israel Rodriguez', cover: 'isaac2.png', file: 'isong2.mp3' },
+      { title: 'First True Love', artist: 'Micaella Santiago', cover: 'miyaki2.png', file: 'msong2.aac' },
+      { title: 'Demonyo', artist: 'Vob Aviso', cover: 'vob2.png', file: 'vsong2.mp3' },
+      { title: 'Save Your Tears', artist: 'Joy Lyn Mejia', cover: 'joy3.png', file: 'jsong3.mp3' },
+      { title: 'Airbag', artist: 'Israel Rodriguez', cover: 'isaac3.png', file: 'isong3.mp3' },
+      { title: 'Imahe', artist: 'Micaella Santiago', cover: 'miyaki3.png', file: 'msong3.aac' },
+      { title: 'Halik', artist: 'Vob Aviso', cover: 'vob3.png', file: 'vsong3.mp3' },
+      { title: 'Prom Queen', artist: 'Joy Lyn Mejia', cover: 'joy4.png', file: 'jsong4.mp3' },
+      { title: 'Fake Plastic Trees', artist: 'Israel Rodriguez', cover: 'isaac4.png', file: 'isong4.mp3' },
+      { title: 'Down', artist: 'Micaella Santiago', cover: 'miyaki4.png', file: 'msong4.aac' },
+      { title: 'Hanggang Kailan', artist: 'Vob Aviso', cover: 'vob4.png', file: 'vsong4.mp3' },
+      { title: 'Wish You Were Here', artist: 'Joy Lyn Mejia', cover: 'joy5.png', file: 'jsong5.mp3' },
+      { title: 'Electioneering', artist: 'Israel Rodriguez', cover: 'isaac5.png', file: 'isong5.mp3' },
+      { title: 'Old Town Road', artist: 'Micaella Santiago', cover: 'miyaki5.png', file: 'msong5.aac' },
+      { title: 'Martyr Nyebera', artist: 'Vob Aviso', cover: 'vob5.png', file: 'vsong5.mp3' },
+
+      // Add more songs as needed
+    ];
+
+    let currentSongIndex = 0;
+    const audio = new Audio(songs[currentSongIndex].file);
+    const playBtn = document.getElementById('play-btn');
+    const pauseBtn = document.getElementById('pause-btn');
+    const albumCover = document.getElementById('album-cover');
+    const songTitle = document.getElementById('song-title');
+    const artistName = document.getElementById('artist-name');
+
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
+      } else {
+        audio.pause();
+        playBtn.style.display = 'block';
+        pauseBtn.style.display = 'none';
+      }
+    }
+
+    function nextSong() {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      changeSong();
+    }
+
+    function prevSong() {
+      currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+      changeSong();
+    }
+
+    function changeSong() {
+      audio.src = songs[currentSongIndex].file;
+      albumCover.src = songs[currentSongIndex].cover;
+      songTitle.innerHTML = songs[currentSongIndex].title;
+      artistName.innerHTML = songs[currentSongIndex].artist;
+      audio.play();
+      playBtn.style.display = 'none';
+      pauseBtn.style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Home Page</title>
+</head>
+
+<body style="margin: 0; padding: 0; font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: #0b5a60; color: white; height: 100vh; width: 100%; box-sizing: border-box;">
+
+  <main style="display: grid; grid-template-areas: 'sidebar navbar' 'sidebar view-port'; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr auto; height: 100%; min-height: 100%; position: relative; width: 100%;">
+
+    <nav style="font-size: 1em; font-weight: 550; color: #c9c9c9; grid-area: navbar; background-color: #072E33; height: 65px; display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; box-sizing: border-box; position: fixed; top: 0; width: 100%; z-index: 1000;">
+      <div class="navbar_controller" style="display: none;"></div>
+      <ul style="list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-left: auto; overflow-y: auto;">
+        <li class="navbar_item" style="display: flex; align-items: center;">
+          <img src="line.png" alt="line icon" style="width: 30px; margin: 5px;">
+        </li>
+        <li class="navbar_item" style="cursor: pointer; text-align: center; padding: 3px; box-sizing: border-box; font-size: 20px; font-weight: lighter; color: #1ED7C3; font-family: Super Boys;">
+          <a href="Landing Page.html" style="text-decoration: none; color: #1ED7C3;" role="button">Sign Out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" style="grid-area: sidebar; background-color: #05161A; width: 230px; height: 100vh; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 25px; overflow-y: auto; position: fixed; z-index: 1001; overflow-x: hidden;">
+      <!-- Fixed Section -->
+      <div class="fixed-section" style="background-color: #05161A; padding-bottom: 20px;">
+        <img style="width: 100%; height: auto; margin-bottom: 30px;" src="logo1.png" />
+        <div style="display: flex; align-items: center;">
+          <img src="home.png" alt="Home Icon" style="width: 30px; margin-right: 10px; margin-bottom: 5px;">
+          <h2 style="font-size: 30px; font-family: Super Boys; font-weight: lighter; color: #1ED7C3; margin-top: 5px; margin-bottom: 10px;">Home</h2>
+          
+        </div>
+        <div style="display: flex; align-items: center;">
+          <a href="index.html">
+            <img src="search.png" alt="Home Icon" style="width: 30px; margin-right: 10px; margin-bottom: 10px;">
+          </a>
+          <input type="text" name="name" id="nameInput" style="width: 90%; height: 30px; margin-bottom: 10px; box-sizing: border-box; background: #072E33; border: 2px solid #025149; padding: 5px; font-size: 14px; font-family: Super Boys; color: #1ED7C3;" required placeholder="Search">
+        </div>
+        <p style="font-size: 20px; font-family: Super Boys; color: #1ED7C3; text-align: center; margin-bottom: 5 px;">Connect with us</p>
+        <!-- Social Media Icons -->
+
+        <a href="https://www.instagram.com/strwbry_mlk/" target="_blank" style="text-decoration: none;">
+          <img src="joy.png" alt="Joy" style="width: 50px; height: 50px; margin-right: 2px; margin-bottom: 5px;">
+        </a>
+
+        <a href="https://www.facebook.com/israel2513" target="_blank" style="text-decoration: none;">
+          <img src="isaac.png" alt="Isaac" style="width: 50px; height: 50px; margin-right: 2px; margin-bottom: 5px;">
+        </a>
+
+        <a href="https://www.instagram.com/issey_miyaki.i/ " target="_blank" style="text-decoration: none;">
+          <img src="miyaki.png" alt="Miyaki" style="width: 50px; height: 50px; margin-right: 2px; margin-bottom: 5px;">
+        </a>
+
+        <a href="https://www.instagram.com/_taike/" target="_blank" style="text-decoration: none;">
+          <img src="vob.png" alt="Vob" style="width: 50px; height: 50px; margin-right: 2px; margin-bottom: 5px;">
+        </a>
+      </div>
+
+      <div class="scrollable-section" style="overflow-y: auto; text-align: left; padding-right: 5px;">
+        <!-- Fixed Section at the top -->
+        <div class="fixed-top" style="position: sticky; top: 0; background-color: #05161A; padding: 10px; text-align: center; color: #1ED7C3;">
+          <h2 style="font-size: 16px; font-family: Super Boys; font-weight: lighter; color: #1ED7C3; margin-right: 20px;">Playlists</h2>
+          <h2 style="font-size: 16px; font-family: Super Boys; font-weight: lighter; color: #1ED7C3; margin-right: 20px;">Artists</h2>
+          <h2 style="font-size: 16px; font-family: Super Boys; font-weight: lighter; color: #1ED7C3; margin-right: 20px;">Albums</h2>
+        </div>
+        <div style="display: flex; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku;">
+          <img src="central.png" alt="Central Cee" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin: 0;">Central Cee</p>
+        </div>
+
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="mudra.png" alt="Mama" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">Tugtugan ni Mudra</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="twice.png" alt="TWICE" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">TWICE</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="sza.png" alt="SZA" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">SZA</p>
+        </div>
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="drake.png" alt="Drake" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">Drake</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="badbun.png" alt="Bad Bunny" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">Bad Bunny</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="kendrick.png" alt="Kendrick Lamar" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">Kendrick Lamar</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="pudra.png" alt="Pudra" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">Tugtugan ni Pudra</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="21savage.png" alt="21 Savage" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">21 Savage</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; padding: 10px; margin-right: 10px; font-family: Milku">
+          <img src="badbunny.png" alt="Neverita" style="width: 80px; margin-right: 20px;">
+          <p style="font-size: 16px; color: #1ED7C3; margin-top: 5px;">Neverita</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Viewport -->
+    <div class="view-port" style="grid-area: view-port; padding: 25px; box-sizing: border-box; overflow-y: auto;">
+
+        <div style="text-align: left; font-size: 45px; font-weight: lighter; color: #1ED7C3 ; position: absolute; left: 325px; top: 100px; font-family:  Adelia;">IV of Shades</div>
+        <img src="us.png" alt="Collage" style="width: 1060px; height: 380px; padding: 16px; position: absolute; left: 270px; top: 155px;">
+        <div style="text-align: left; font-size: 30px; font-weight: lighter; color: #1ED7C3 ; position: absolute; left: 325px; top: 560px; font-family: Adelia;">Joy Lyn Mejia</div>
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 300px; top: 595px;">
+        <img src="joy1.png" alt="Grow" style="width: 175px; height: 175px; position: absolute; left: 330px; top: 620px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 770px; left: 330px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Prom Queen</p>
+
+        </div> 
+
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 500px; top: 595px;">
+        <img src="joy2.png" alt="Grow" style="width: 175px; height: 175px; position: absolute; left: 530px; top: 620px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 770px; left: 530px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Save your tears</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 700px; top: 595px;">
+        <img src="joy3.png" alt="Grow" style="width: 175px; height: 175px; position: absolute; left: 730px; top: 620px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 770px; left: 730px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Wish you were here</p>
+        
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 900px; top: 595px;">
+        <img src="joy4.png" alt="Grow" style="width: 175px; height: 175px; position: absolute; left: 930px; top: 620px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 770px; left: 930px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">When she loved </p>
+        
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 1100px; top: 595px;">
+        <img src="joy5.png" alt="Grow" style="width: 175px; height: 175px; position: absolute; left: 1130px; top: 620px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 770px; left: 1130px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Wish you were</p>
+        
+        <div style="text-align: left; font-size: 30px; font-weight: lighter; color: #1ED7C3 ; position: absolute; left: 325px; top: 920px; font-family: Adelia;">Israel Rodriguez</div>
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 300px; top: 975px;">
+        <img src="isaac1.png" alt="Fact" style="width: 175px; height: 175px; position: absolute; left: 330px; top: 1000px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1150px; left: 330px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Karma Police</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 500px; top: 975px;">
+        <img src="isaac2.png" alt="Fact" style="width: 175px; height: 175px; position: absolute; left: 530px; top: 1000px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1150px; left: 530px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">No Surprises</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 700px; top: 975px;">
+        <img src="isaac3.png" alt="Fact" style="width: 175px; height: 175px; position: absolute; left: 730px; top: 1000px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1150px; left: 730px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Airbag</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 900px; top: 975px;">
+        <img src="isaac4.png" alt="Fact" style="width: 175px; height: 175px; position: absolute; left: 930px; top: 1000px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1150px; left: 930px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Electioneering</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 1100px; top: 975px;">
+        <img src="isaac5.png" alt="Fact" style="width: 175px; height: 175px; position: absolute; left: 1130px; top: 1000px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1150px; left: 1130px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Fake Plastic Trees</p>
+  
+        <div style="text-align: left; font-size: 30px; font-weight: lighter; color: #1ED7C3 ; position: absolute; left: 325px; top: 1300px; font-family: Adelia;">Micaella Nil Santiago</div>
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 300px; top: 1355px;">
+        <img src="miyaki1.png" alt="Genre" style="width: 175px; height: 175px; position: absolute; left: 330px; top: 1380px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1530px; left: 330px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">DNA</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 500px; top: 1355px;">
+        <img src="miyaki2.png" alt="Genre" style="width: 175px; height: 175px; position: absolute; left: 530px; top: 1380px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1530px; left: 530px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">First True Love</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 700px; top: 1355px;">
+        <img src="miyaki3.png" alt="Genre" style="width: 175px; height: 175px; position: absolute; left: 730px; top: 1380px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1530px; left: 730px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Old Town Road</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 900px; top: 1355px;">
+        <img src="miyaki4.png" alt="Genre" style="width: 175px; height: 175px; position: absolute; left: 930px; top: 1380px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1530px; left: 930px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Down</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 1100px; top: 1355px;">
+        <img src="miyaki5.png" alt="Genre" style="width: 175px; height: 175px; position: absolute; left: 1130px; top: 1380px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1530px; left: 1130px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Yound & Dumb</p>
+  
+        <div style="text-align: left; font-size: 30px; font-weight: lighter; color: #1ED7C3 ; position: absolute; left: 325px; top: 1685px; font-family: Adelia;">Vob Annrea Aviso</div>
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 300px; top: 1735px;">
+        <img src="vob1.png" alt="Favorite" style="width: 175px; height: 175px; position: absolute; left: 330px; top: 1760px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1910px; left: 330px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Demonyo</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 500px; top: 1735px;">
+        <img src="vob2.png" alt="Favorite" style="width: 175px; height: 175px; position: absolute; left: 530px; top: 1760px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1910px; left: 530px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Halik</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 700px; top: 1735px;">
+        <img src="vob3.png" alt="Favorite" style="width: 175px; height: 175px; position: absolute; left: 730px; top: 1760px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1905px; left: 730px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Hanggang Kailan</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 900px; top: 1735px;">
+        <img src="vob4.png" alt="Favorite" style="width: 175px; height: 175px; position: absolute; left: 930px; top: 1760px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1910px; left: 930px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Martyr Nyebera</p>
+  
+        <img src="rectangle.png" alt="container" style="width: 200px; height: 280px; padding: 16px; position: absolute; left: 1100px; top: 1735px;">
+        <img src="vob5.png" alt="Favorite" style="width: 175px; height: 175px; position: absolute; left: 1130px; top: 1760px; border-radius: 4px;">
+        <p class="play_head" style="text-align: left; font-size: 20px; font-weight: normal; color: #1ED7C3; position: absolute; top: 1910px; left: 1130px; width: 175px; font-family: Super Boys; padding: 10px 16px; white-space: normal;">Bulong</p>
+  </div>
+  </main>
+  </body>
+  
+  </html>
+    

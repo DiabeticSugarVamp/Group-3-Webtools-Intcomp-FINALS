@@ -1,0 +1,78 @@
+body {
+  font-family: 'Adelia';
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  background-color: #05161A;
+  color: #fff;
+  text-align: center; /* Center text within the body */
+}
+
+.spotify-player {
+  max-width: 350px;
+  margin: 80px auto 20px; /* Increased top margin to move the container down */
+  background-color: #081e23;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.now-playing-header {
+  font-family: 'Adelia';
+  font-size: 20px; /* Adjusted font size for Now Playing header */
+  font-weight: lighter; 
+  color: rgb(18, 155, 165);
+  margin-bottom: 10px; /* Adjusted margin-bottom for spacing */
+  line-height: 1; /* Adjusted line height for compression */
+}
+
+.player-header img {
+  width: 60px;
+  height: 45px;
+  margin-right: 6px;
+}
+
+#album-cover {
+  width: 250px; /* Adjusted width for closer spacing */
+  height: 250px; /* Adjusted height for closer spacing */
+  margin-top: -15px;
+  margin-bottom: 10px; /* Adjusted margin-bottom for spacing */
+}
+
+.details h2 {
+  font-family: 'Super Boys';
+  font-weight: lighter;
+  font-size: 30px; /* Adjusted font size for Song Title */
+  margin-top: -10px;
+  color: #1ED7C3;
+  margin-bottom: 10px; /* Adjusted margin-bottom for closer spacing */
+  line-height: 1; /* Adjusted line height for compression */
+}
+
+.details p {
+  font-family: 'Milku';
+  font-weight: lighter;
+  font-size: 20px; /* Adjusted font size for Artist Name */
+  margin-bottom: 15px; /* Adjusted margin-bottom for closer spacing */
+  margin-top: -5px;
+  color: #1ED7C3;
+  line-height: 1; /* Adjusted line height for compression */
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Center the buttons vertically */
+  margin-top: 5px; /* Adjusted margin-top for spacing */
+}
+
+button,
+img {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  width: 25px; /* Adjusted width for compressed size */
+  height: 25px; /* Adjusted height for compressed size */
+}
